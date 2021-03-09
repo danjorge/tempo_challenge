@@ -5,6 +5,10 @@ For further initialization of this project, you will need:
 
 * JDK 11+ (installed)
 * JVM (installed)
+* Clone this project using: 
+```
+git clone https://github.com/danjorge/tempo_challenge.git 
+```  
 * I advocate to use intellij IDE in this project, due it's more simple to configure to run the project
 * otherwise, to run without any IDE, you can use this command in one terminal:  
 ```
