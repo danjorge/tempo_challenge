@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "team_roles", schema = "challenge_db")
+@Table(name = "role", schema = "challenge_db")
 @Data
 @Builder
 @AllArgsConstructor
@@ -18,5 +18,5 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String role;
+    private String description;
 }

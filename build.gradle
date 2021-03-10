@@ -29,6 +29,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	annotationProcessor('org.hibernate:hibernate-jpamodelgen:5.4.21.Final')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.junit.platform:junit-platform-runner'
+	testImplementation 'org.junit.jupiter:junit-jupiter-engine'
+	testImplementation 'junit:junit:4.12'
 }
 
 test {

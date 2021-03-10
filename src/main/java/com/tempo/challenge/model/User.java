@@ -1,6 +1,7 @@
 package com.tempo.challenge.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
@@ -13,6 +14,7 @@ import java.util.List;
 @Table(name = "User", schema = "challenge_db")
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class User {
 
     @Id
@@ -25,10 +27,8 @@ public class User {
     private String id;
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "role_id", columnDefinition = "integer default 1")
-    private Role role;
+    @OneToMany(mappedBy = "userTeamId.userId", cascade = CascadeType.ALL)
+    private List<UserTeam> userTeams;
 
-    @ElementCollection
-    private List<String> teamId;
+
 }

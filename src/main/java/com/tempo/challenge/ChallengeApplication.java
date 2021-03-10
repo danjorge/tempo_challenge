@@ -29,7 +29,7 @@ public class ChallengeApplication implements CommandLineRunner{
 
 			roles.forEach(r -> {
 				Role tr = new Role();
-				tr.setRole(r);
+				tr.setDescription(r);
 				teamRoles.add(tr);
 			});
 

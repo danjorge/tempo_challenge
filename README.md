@@ -14,13 +14,12 @@ git clone https://github.com/danjorge/tempo_challenge.git
 ```
 ./gradlew bootRun
 ```
-
-### What was did into the project and The Approach used to solve the problem
-* Imagining that the services of listing and saving users are already ready, to enrich it by giving the ability to associate team members for a role, we need to create a Role class and call it within the Users class as an object, thus initiating a relationship between the classes called object orientation.
+---
+### What was done into the project, and The Approach used to solve the problem
+* Imagining that the services of listing and saving users are already ready, to enrich them by giving the possibility of associating team members for a role, we need to create a Role class, an intermediate class called UserTeam with a primary key composed of users and teams for a role, so it is possible to search for a role for a member and a member for a role, also including the call to the Role class within that intermediate table.
 * That done, we need to include a repository to make calls to the database, thus making it possible to save the objects.
 * After that, we need to create a class where all the logic needs to be called Service. So, we created a controller to receive calls made to the service.
 ---
-* The approach used was to include a class for the user's role and relate it to the user class itself including an attribute called role and related them using JPA and Hibernate with the appropriate annotations, thus making it possible to make a logic to include a role within a user at the time a user is being saved or when a role inclusion is requested.
 
 ### Technologies used
 You can see in:

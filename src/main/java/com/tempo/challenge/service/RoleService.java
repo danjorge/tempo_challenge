@@ -17,7 +17,6 @@ public class RoleService {
         return repository.findAll();
     }
 
-
     public List<Role> save(List<Role> role) {
         return repository.saveAll(role);
     }

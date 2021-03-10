@@ -1,19 +1,20 @@
 package com.tempo.challenge.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.UUID;
 
 @Data
 @Entity
 @Table(name = "Team", schema = "challenge_db")
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Team {
 
     @Id
@@ -25,4 +26,7 @@ public class Team {
     @Column(name = "id", updatable = false, nullable = false)
     private String id;
     private String name;
+
+    @OneToMany(mappedBy = "userTeamId.teamId", cascade = CascadeType.ALL)
+    private List<UserTeam> userTeams;
 }
