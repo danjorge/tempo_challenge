@@ -1,0 +1,24 @@
+version: '3.6'
+
+services:
+  challenge-api:
+    build:
+      dockerfile: ./api.dockerfile
+      context: .
+    container_name: challenge-api
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+    ports:
+      - 8444:8444
+  challenge-api-container:
+    image: nginx
+    restart: always
+    volumes:
+      - ./nginx-conf/:/etc/nginx/conf.d/
+    environment:
+      - VIRTUAL_HOST=challenge-api-dev.danieljorge.com
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_HOST=challenge-api-dev.danieljorge.com
+      - LETSENCRYPT_EMAIL=danjorge@gmail.com
+    expose:
+      - 80

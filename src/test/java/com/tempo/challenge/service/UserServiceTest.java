@@ -5,7 +5,7 @@ import com.tempo.challenge.model.*;
 import com.tempo.challenge.repository.RoleRepository;
 import com.tempo.challenge.repository.TeamRepository;
 import com.tempo.challenge.repository.UserRepository;
-import com.tempo.challenge.utils.BaseUnitTests;
+import com.tempo.challenge.utils.BaseTests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.BDDMockito.given;
 
-class UserServiceTest extends BaseUnitTests {
+class UserServiceTest extends BaseTests {
 
     @InjectMocks
     private UserService userService;

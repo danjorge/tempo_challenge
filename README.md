@@ -10,7 +10,7 @@ For further initialization of this project, you will need:
 git clone https://github.com/danjorge/tempo_challenge.git 
 ```  
 * I advocate to use intellij IDE in this project, due it's more simple to configure to run the project
-* otherwise, to run without any IDE, you can use this command in one terminal:  
+* otherwise, to run without any IDE, you can use this command in one terminal (root directory of this project):  
 ```
 ./gradlew bootRun
 ```
